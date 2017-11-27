@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import VotingApp from './VotingApp'
+import ExploreMiami from './ExploreMiami'
 
 class App extends Component {
     render() {
         return (
-            <VotingApp />
+            <ExploreMiami/>
         );
     }
 }
