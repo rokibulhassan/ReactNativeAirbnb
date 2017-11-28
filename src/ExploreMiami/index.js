@@ -1,25 +1,25 @@
 import React, {Component} from 'react'
 import Filters from './Filters'
 import ItemList from './ItemList'
-import seedItems from './seed'
+import dataList from './data.js'
 import './style.css'
 
 
 export default class ExploreMiami extends Component {
 
     state = {
-        sections: []
+        dataList: []
     }
 
     componentDidMount = () => {
         this.setState({
-            sections: seedItems
+            dataList: dataList
         })
     }
 
     render() {
         function filterDataByTag(targetTag) {
-            seedItems.forEach(function (sectionData) {
+            dataList.forEach(function (sectionData) {
                 sectionData.items = sectionData.items.filter(function (el) {
                     return el.tag === targetTag;
                 });
@@ -27,7 +27,7 @@ export default class ExploreMiami extends Component {
         }
 
         function filterDataByCategory(targetCategory) {
-            seedItems.forEach(function (sectionData) {
+            dataList.forEach(function (sectionData) {
                 sectionData.items = sectionData.items.filter(function (el) {
                     return el.categories.indexOf(targetCategory) > -1;
                 });
@@ -37,14 +37,15 @@ export default class ExploreMiami extends Component {
         //filterDataByTag("CLUBBING")
         //filterDataByCategory("Homes")
 
-        console.log(seedItems)
+        //console.log(dataList)
 
         return (
             <div className="main ui container">
                 <Filters/>
-                {this.state.sections.map((section) =>
+                {this.state.dataList.map((section) =>
+
                     <ItemList
-                        key={section.id}
+                        key={section._id}
                         name={section.name}
                         items={section.items}
                     />
