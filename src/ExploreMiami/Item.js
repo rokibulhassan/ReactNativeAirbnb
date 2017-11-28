@@ -3,10 +3,10 @@ import React, {Component} from 'react'
 export default class Item extends Component {
 
     render() {
-        const {imageUrl, tag, title, price} = this.props.item
+        const {imageUrl, tag, title, price} = this.props.item;
         return (
             <div className="column">
-                <img className="ui wireframe image" src={imageUrl} alt="Item"/>
+                <img className="ui wireframe image" src={imageUrl} alt={title}/>
                 <div className="tag">{tag}</div>
                 <div className="title">{title}</div>
                 <div className="price">${price} per person</div>

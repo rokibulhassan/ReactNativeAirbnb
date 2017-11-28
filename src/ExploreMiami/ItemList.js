@@ -1,27 +1,21 @@
 import React, {Component} from 'react'
-import seedItems from './seed'
 import Item from './Item'
 
 export default class ItemList extends Component {
-    state = {
-        items: []
-    }
-
-    componentDidMount = () => {
-        this.setState({
-            items: seedItems
-        })
-    }
 
     render() {
+
         return (
-            <div className='ui four column grid'>
-                {this.state.items.map((item) =>
-                    <Item
-                        key={item.id}
-                        item={item}
-                    />
-                )}
+            <div>
+                <h1 className="ui dividing header">{this.props.name}</h1>
+                <div className='ui four column grid'>
+                    {this.props.items.map((item) =>
+                        <Item
+                            key={item.id}
+                            item={item}
+                        />
+                    )}
+                </div>
             </div>
         )
     }
