@@ -11,7 +11,7 @@ export default class ItemList extends Component {
                 <div className='ui four column grid'>
                     {this.props.items.map((item) =>
                         <Item
-                            key={item.id}
+                            key={item._id}
                             item={item}
                         />
                     )}

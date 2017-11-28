@@ -1,16 +1,19 @@
+const generatePrice = () => Math.floor((Math.random() * 30) + 12)
+
 const dataList = [
   {
     "_id": "5a1cfea66de8b0062f1e5129",
     "index": 0,
     "name": "Just booked in Miami",
+    
     "items": [
       {
         "_id": "5a1cfea675f7956a7103326d",
         "index": 0,
         "picture": "image0",
         "tag": "CLUBBING",
-        "title": "Title",
-        "price": "$1,388.86 per person",
+        "title": "Art in the Making",
+        "price": generatePrice(),
         "isFavourite": false,
         "category": [
           "Homes",
@@ -22,8 +25,8 @@ const dataList = [
         "index": 1,
         "picture": "image1",
         "tag": "WATER SPORTS",
-        "title": "Title",
-        "price": "$1,049.58 per person",
+        "title": "PaintingPicnik",
+        "price": generatePrice(),
         "isFavourite": true,
         "category": [
           "Restaurants"
@@ -34,8 +37,8 @@ const dataList = [
         "index": 2,
         "picture": "image2",
         "tag": "PADDLEBOARDING",
-        "title": "Title",
-        "price": "$3,670.18 per person",
+        "title": "On Wynwoods Walls",
+        "price": generatePrice(),
         "isFavourite": true,
         "category": [
           "Homes",
@@ -47,8 +50,8 @@ const dataList = [
         "index": 3,
         "picture": "image3",
         "tag": "ENTERTAINMENT",
-        "title": "Title",
-        "price": "$2,289.07 per person",
+        "title": "The Collection",
+        "price": generatePrice(),
         "isFavourite": true,
         "category": [
           "Homes",
@@ -60,8 +63,8 @@ const dataList = [
         "index": 4,
         "picture": "image4",
         "tag": "ENTERTAINMENT",
-        "title": "Title",
-        "price": "$2,556.91 per person",
+        "title": "GLAM ON THE BEACH",
+        "price": generatePrice(),
         "isFavourite": true,
         "category": [
           "Restaurants"
@@ -72,8 +75,8 @@ const dataList = [
         "index": 5,
         "picture": "image5",
         "tag": "WATER SPORTS",
-        "title": "Title",
-        "price": "$1,993.41 per person",
+        "title": "Under the Streets",
+        "price": generatePrice(),
         "isFavourite": true,
         "category": [
           "Restaurants",
@@ -86,8 +89,8 @@ const dataList = [
         "index": 6,
         "picture": "image6",
         "tag": "PADDLEBOARDING",
-        "title": "Title",
-        "price": "$1,746.40 per person",
+        "title": "Street Cinema",
+        "price": generatePrice(),
         "isFavourite": true,
         "category": [
           "Homes",
@@ -99,8 +102,8 @@ const dataList = [
         "index": 7,
         "picture": "image7",
         "tag": "ENTERTAINMENT",
-        "title": "Title",
-        "price": "$1,829.16 per person",
+        "title": "The Good Life",
+        "price": generatePrice(),
         "isFavourite": true,
         "category": [
           "Experiences",
@@ -119,8 +122,8 @@ const dataList = [
         "index": 0,
         "picture": "image0",
         "tag": "LATIN FOOD",
-        "title": "Title",
-        "price": "$2,198.65 per person",
+        "title": "Night SUP and Kayak tour",
+        "price": generatePrice(),
         "isFavourite": true,
         "category": [
           "Homes"
@@ -131,8 +134,8 @@ const dataList = [
         "index": 1,
         "picture": "image1",
         "tag": "CLUBBING",
-        "title": "Title",
-        "price": "$3,459.40 per person",
+        "title": "See alligators on an Everglades safari",
+        "price": generatePrice(),
         "isFavourite": false,
         "category": [
           "Homes",
@@ -144,8 +147,8 @@ const dataList = [
         "index": 2,
         "picture": "image2",
         "tag": "ENTERTAINMENT",
-        "title": "Title",
-        "price": "$3,113.08 per person",
+        "title": "SUP or Kayak Nature Exploration",
+        "price": generatePrice(),
         "isFavourite": false,
         "category": [
           "Restaurants",
@@ -157,8 +160,8 @@ const dataList = [
         "index": 3,
         "picture": "image3",
         "tag": "NATURE",
-        "title": "Title",
-        "price": "$3,632.31 per person",
+        "title": "South Beach & Venetian Bike & Mimosa",
+        "price": generatePrice(),
         "isFavourite": false,
         "category": [
           "Experiences",
@@ -170,8 +173,8 @@ const dataList = [
         "index": 4,
         "picture": "image4",
         "tag": "WATER SPORTS",
-        "title": "Title",
-        "price": "$3,079.49 per person",
+        "title": "Practice forest therapy with an artist",
+        "price": generatePrice(),
         "isFavourite": false,
         "category": [
           "Homes"
@@ -182,8 +185,8 @@ const dataList = [
         "index": 5,
         "picture": "image5",
         "tag": "LATIN FOOD",
-        "title": "Title",
-        "price": "$1,805.56 per person",
+        "title": "Captain Planet",
+        "price": generatePrice(),
         "isFavourite": false,
         "category": [
           "Restaurants"
@@ -194,8 +197,8 @@ const dataList = [
         "index": 6,
         "picture": "image6",
         "tag": "WATER SPORTS",
-        "title": "Title",
-        "price": "$1,985.32 per person",
+        "title": "Hike and boat through the Everglades",
+        "price": generatePrice(),
         "isFavourite": true,
         "category": [
           "Homes",
@@ -207,8 +210,8 @@ const dataList = [
         "index": 7,
         "picture": "image7",
         "tag": "LATIN FOOD",
-        "title": "Title",
-        "price": "$2,567.72 per person",
+        "title": "Health is Wealth",
+        "price": generatePrice(),
         "isFavourite": true,
         "category": [
           "Homes",

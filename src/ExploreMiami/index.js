@@ -39,13 +39,13 @@ export default class ExploreMiami extends Component {
         //filterDataByTag("CLUBBING")
         //filterDataByCategory("Experiences")
 
-        console.log(dataList)
+        //console.log(dataList)
 
         return (
             <div className="main ui container">
-                {this.state.sections.map((section) =>
+                {this.state.dataList.map((section) =>
                     <ItemList
-                        key={section.id}
+                        key={section._id}
                         name={section.name}
                         items={section.items}
                     />
