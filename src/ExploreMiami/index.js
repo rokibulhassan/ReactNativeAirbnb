@@ -1,18 +1,21 @@
 import React, {Component} from 'react'
 import ItemList from './ItemList'
 import dataList from './data.js'
+import seedItems from './seed'
 import './style.css'
 
 
 export default class ExploreMiami extends Component {
 
     state = {
-        dataList: []
+        dataList: [],
+        sections: []
     }
 
     componentDidMount = () => {
         this.setState({
-            dataList: dataList
+            dataList: dataList,
+            sections: seedItems
         })
     }
 
@@ -40,8 +43,13 @@ export default class ExploreMiami extends Component {
 
         return (
             <div className="main ui container">
-                <h1 className="ui dividing header">Explore Miami</h1>
-                <ItemList/>
+                {this.state.sections.map((section) =>
+                    <ItemList
+                        key={section.id}
+                        name={section.name}
+                        items={section.items}
+                    />
+                )}
             </div>
         )
     }
