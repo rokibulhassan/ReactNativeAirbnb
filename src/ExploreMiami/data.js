@@ -1,4 +1,4 @@
-const items = [
+const dataList = [
   {
     "_id": "5a1cfea66de8b0062f1e5129",
     "index": 0,
@@ -225,4 +225,4 @@ const items = [
   }
 ]
 
-export default items
+export default dataList
