@@ -21,7 +21,7 @@ i.icon {
     margin-bottom: 10px;
 }
 
-.category {
+.tag {
     color: #706627;
     font-weight: 700;
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
@@ -36,7 +36,7 @@ i.icon {
     margin-bottom: 2px;
 }
 
-.description {
+.title {
     font-weight: 700;
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
     font-size: 19px;
