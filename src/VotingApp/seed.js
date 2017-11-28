@@ -8,7 +8,7 @@ const products = [
         url: '#',
         votes: generateVoteCount(),
         submitterAvatarUrl: 'images/avatars/daniel.jpg',
-        productImageUrl: 'images/products/image-aqua.png',
+        productImageUrl: 'images/items/image0.webp',
     },
     {
         id: 2,
@@ -17,7 +17,7 @@ const products = [
         url: '#',
         votes: generateVoteCount(),
         submitterAvatarUrl: 'images/avatars/kristy.png',
-        productImageUrl: 'images/products/image-rose.png',
+        productImageUrl: 'images/items/image1.webp',
     },
     {
         id: 3,
@@ -26,7 +26,7 @@ const products = [
         url: '#',
         votes: generateVoteCount(),
         submitterAvatarUrl: 'images/avatars/veronika.jpg',
-        productImageUrl: 'images/products/image-steel.png',
+        productImageUrl: 'images/items/image2.webp',
     },
     {
         id: 4,
@@ -35,7 +35,7 @@ const products = [
         url: '#',
         votes: generateVoteCount(),
         submitterAvatarUrl: 'images/avatars/molly.png',
-        productImageUrl: 'images/products/image-yellow.png',
+        productImageUrl: 'images/items/image3.webp',
     },
 ]
 
