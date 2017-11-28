@@ -2,7 +2,7 @@ const items = [
   {
     "_id": "5a1cfea66de8b0062f1e5129",
     "index": 0,
-    "name": "Section 0",
+    "name": "Just booked in Miami",
     "items": [
       {
         "_id": "5a1cfea675f7956a7103326d",
@@ -112,7 +112,7 @@ const items = [
   {
     "_id": "5a1cfea6064458185cfd6f47",
     "index": 1,
-    "name": "Section 1",
+    "name": "Popular reservations",
     "items": [
       {
         "_id": "5a1cfea6ec0afa538ef2e4b6",
