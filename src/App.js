@@ -5,7 +5,7 @@ import VotingApp from './VotingApp'
 class App extends Component {
     render() {
         return (
-            <VotingApp/>
+            <ExploreMiami/>
         );
     }
 }

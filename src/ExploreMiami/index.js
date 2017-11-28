@@ -1,8 +1,21 @@
 import React, {Component} from 'react'
 import './style.css'
+import dataList from './data.js'
 
 
 export default class ExploreMiami extends Component {
+    state = {
+        dataList: []
+    }
+
+    componentDidMount = () => {
+        this.setState({
+            dataList: dataList
+        })
+
+        console.log(dataList)
+    }
+
     render() {
         return (
             <div className="main ui container">
