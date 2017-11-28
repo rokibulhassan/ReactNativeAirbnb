@@ -13,6 +13,7 @@ export default class ItemList extends Component {
                         <Item
                             key={item._id}
                             item={item}
+                            onTagSelected={this.props.onTagSelected}
                         />
                     )}
                 </div>

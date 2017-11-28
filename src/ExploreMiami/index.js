@@ -17,28 +17,33 @@ export default class ExploreMiami extends Component {
         })
     }
 
+    filterDataByTag = (targetTag) => {
+        console.log("click")
+
+        dataList.forEach(function (sectionData) {
+            sectionData.items = sectionData.items.filter(function (el) {
+                return el.tag === targetTag;
+            });
+        });
+
+        this.setState({
+            dataList: dataList
+        })
+    }
+
+    filterDataByCategory = (targetCategory) => {
+        dataList.forEach(function (sectionData) {
+            sectionData.items = sectionData.items.filter(function (el) {
+                return el.categories.indexOf(targetCategory) > -1;
+            });
+        });
+
+        this.setState({
+            dataList: dataList
+        })
+    }
+
     render() {
-        function filterDataByTag(targetTag) {
-            dataList.forEach(function (sectionData) {
-                sectionData.items = sectionData.items.filter(function (el) {
-                    return el.tag === targetTag;
-                });
-            });
-        }
-
-        function filterDataByCategory(targetCategory) {
-            dataList.forEach(function (sectionData) {
-                sectionData.items = sectionData.items.filter(function (el) {
-                    return el.categories.indexOf(targetCategory) > -1;
-                });
-            });
-        }
-
-        //filterDataByTag("CLUBBING")
-        //filterDataByCategory("Homes")
-
-        //console.log(dataList)
-
         return (
             <div className="main ui container">
                 <Filters/>
@@ -48,6 +53,7 @@ export default class ExploreMiami extends Component {
                         key={section._id}
                         name={section.name}
                         items={section.items}
+                        onTagSelected={this.filterDataByTag}
                     />
                 )}
             </div>
