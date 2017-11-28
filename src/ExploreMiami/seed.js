@@ -14,7 +14,6 @@ const items = [
                 isFavourite: false,
                 categories: [
                     "Homes",
-                    "Restaurants"
                 ]
             },
             {
@@ -38,7 +37,7 @@ const items = [
                 isFavourite: false,
                 categories: [
                     "Homes",
-                    "Restaurants"
+                    "Experiences"
                 ]
             },
             {
@@ -50,7 +49,6 @@ const items = [
                 isFavourite: false,
                 categories: [
                     "Homes",
-                    "Restaurants"
                 ]
             }
         ]
@@ -67,7 +65,6 @@ const items = [
                 price: generatePrice(),
                 isFavourite: false,
                 categories: [
-                    "Homes",
                     "Restaurants"
                 ]
             },
@@ -80,7 +77,7 @@ const items = [
                 isFavourite: false,
                 categories: [
                     "Homes",
-                    "Restaurants"
+                    "Experiences"
                 ]
             },
             {
@@ -92,7 +89,6 @@ const items = [
                 isFavourite: false,
                 categories: [
                     "Homes",
-                    "Restaurants"
                 ]
             },
             {
@@ -103,7 +99,7 @@ const items = [
                 price: generatePrice(),
                 isFavourite: false,
                 categories: [
-                    "Homes",
+                    "Experiences",
                     "Restaurants"
                 ]
             }
