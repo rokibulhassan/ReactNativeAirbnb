@@ -1,25 +1,25 @@
 import React, {Component} from 'react'
 import Filters from './Filters'
 import ItemList from './ItemList'
-import seedItems from './seed'
+import dataList from './data.js'
 import './style.css'
 
 
 export default class ExploreMiami extends Component {
 
     state = {
-        sections: []
+        dataList: []
     }
 
     componentDidMount = () => {
         this.setState({
-            sections: seedItems
+            dataList: dataList
         })
     }
 
     render() {
         function filterDataByTag(targetTag) {
-            seedItems.forEach(function (sectionData) {
+            dataList.forEach(function (sectionData) {
                 sectionData.items = sectionData.items.filter(function (el) {
                     return el.tag === targetTag;
                 });
@@ -27,7 +27,7 @@ export default class ExploreMiami extends Component {
         }
 
         function filterDataByCategory(targetCategory) {
-            seedItems.forEach(function (sectionData) {
+            dataList.forEach(function (sectionData) {
                 sectionData.items = sectionData.items.filter(function (el) {
                     return el.categories.indexOf(targetCategory) > -1;
                 });
