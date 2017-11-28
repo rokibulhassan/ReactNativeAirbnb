@@ -18,8 +18,6 @@ export default class ExploreMiami extends Component {
     }
 
     filterDataByTag = (targetTag) => {
-        console.log("click")
-
         dataList.forEach(function (sectionData) {
             sectionData.items = sectionData.items.filter(function (el) {
                 return el.tag === targetTag;
@@ -32,23 +30,24 @@ export default class ExploreMiami extends Component {
     }
 
     filterDataByCategory = (targetCategory) => {
-        dataList.forEach(function (sectionData) {
-            sectionData.items = sectionData.items.filter(function (el) {
-                return el.categories.indexOf(targetCategory) > -1;
-            });
-        });
+        console.log("click filter")
+        // dataList.forEach(function (sectionData) {
+        //     sectionData.items = sectionData.items.filter(function (el) {
+        //         return el.category.indexOf(targetCategory) > -1;
+        //     });
+        // });
 
-        this.setState({
-            dataList: dataList
-        })
+        // this.setState({
+        //     dataList: dataList
+        // })
     }
 
     render() {
         return (
             <div className="main ui container">
-                <Filters/>
-                {this.state.dataList.map((section) =>
+                <Filters onFilter1Selected={this.filterDataByCategory}/>
 
+                {this.state.dataList.map((section) =>
                     <ItemList
                         key={section._id}
                         name={section.name}

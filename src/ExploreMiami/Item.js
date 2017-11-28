@@ -12,7 +12,6 @@ export default class Item extends Component {
     );
 
     render() {
-        console.log('images/items/'+this.props.item.picture+'.wabp')
         const {picture, tag, title, price} = this.props.item;
         return (
             <div className="column">
