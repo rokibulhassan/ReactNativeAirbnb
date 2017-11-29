@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Filters from './Filters'
 import ItemList from './ItemList'
-import dataList from './data'
+import getJSONData from './data'
 import categoryList from './categories-data'
 import './style.css'
 
@@ -15,12 +15,13 @@ export default class ExploreMiami extends Component {
 
     componentDidMount = () => {
         this.setState({
-            dataList: dataList,
+            dataList: getJSONData(),
             categoryList: categoryList
         })
     }
 
     filterDataByTag = (targetTag) => {
+        let dataList = this.state.dataList
         dataList.forEach(function (sectionData) {
             sectionData.items = sectionData.items.filter(function (el) {
                 return el.tag === targetTag;
@@ -33,7 +34,7 @@ export default class ExploreMiami extends Component {
     }
 
     filterDataByCategory = (targetCategory) => {
-        console.log(targetCategory)
+        let dataList = this.state.dataList
 
         dataList.forEach(function (sectionData) {
             sectionData.items = sectionData.items.filter(function (el) {
@@ -47,6 +48,8 @@ export default class ExploreMiami extends Component {
     }
 
     manageFavourite = (item) => {
+        let dataList = this.state.dataList
+
         let favouriteSection = dataList[dataList.length - 1];
 
         var index = favouriteSection.items.indexOf(item);
