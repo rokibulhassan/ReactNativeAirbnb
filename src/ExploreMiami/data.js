@@ -27,7 +27,7 @@ const dataList = [
         "tag": "WATER SPORTS",
         "title": "PaintingPicnik",
         "price": generatePrice(),
-        "isFavourite": true,
+        "isFavourite": false,
         "category": [
           "Restaurants"
         ]
@@ -39,7 +39,7 @@ const dataList = [
         "tag": "PADDLEBOARDING",
         "title": "On Wynwoods Walls",
         "price": generatePrice(),
-        "isFavourite": true,
+        "isFavourite": false,
         "category": [
           "Homes",
           "Experiences"
@@ -52,7 +52,7 @@ const dataList = [
         "tag": "ENTERTAINMENT",
         "title": "The Collection",
         "price": generatePrice(),
-        "isFavourite": true,
+        "isFavourite": false,
         "category": [
           "Homes",
           "Restaurants"
@@ -65,7 +65,7 @@ const dataList = [
         "tag": "ENTERTAINMENT",
         "title": "GLAM ON THE BEACH",
         "price": generatePrice(),
-        "isFavourite": true,
+        "isFavourite": false,
         "category": [
           "Restaurants"
         ]
@@ -77,7 +77,7 @@ const dataList = [
         "tag": "WATER SPORTS",
         "title": "Under the Streets",
         "price": generatePrice(),
-        "isFavourite": true,
+        "isFavourite": false,
         "category": [
           "Restaurants",
           "Homes",
@@ -91,7 +91,7 @@ const dataList = [
         "tag": "PADDLEBOARDING",
         "title": "Street Cinema",
         "price": generatePrice(),
-        "isFavourite": true,
+        "isFavourite": false,
         "category": [
           "Homes",
           "Experiences"
@@ -104,7 +104,7 @@ const dataList = [
         "tag": "ENTERTAINMENT",
         "title": "The Good Life",
         "price": generatePrice(),
-        "isFavourite": true,
+        "isFavourite": false,
         "category": [
           "Experiences",
           "Homes"
@@ -124,7 +124,7 @@ const dataList = [
         "tag": "LATIN FOOD",
         "title": "Night SUP and Kayak tour",
         "price": generatePrice(),
-        "isFavourite": true,
+        "isFavourite": false,
         "category": [
           "Homes"
         ]
@@ -199,7 +199,7 @@ const dataList = [
         "tag": "WATER SPORTS",
         "title": "Hike and boat through the Everglades",
         "price": generatePrice(),
-        "isFavourite": true,
+        "isFavourite": false,
         "category": [
           "Homes",
           "Experiences"
@@ -212,7 +212,7 @@ const dataList = [
         "tag": "LATIN FOOD",
         "title": "Health is Wealth",
         "price": generatePrice(),
-        "isFavourite": true,
+        "isFavourite": false,
         "category": [
           "Homes",
           "Restaurants"
