@@ -78,3 +78,12 @@ i.icon {
     padding-bottom: 0;
     color: #484848;
 }
+
+.favorite {
+    width: 55px;
+    z-index: 999999;
+    position: absolute;
+    margin-left: 75%;
+    margin-top: 10px;
+    cursor: pointer;
+}

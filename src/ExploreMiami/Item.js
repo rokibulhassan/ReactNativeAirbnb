@@ -6,7 +6,7 @@ export default class Item extends Component {
         onTagSelected: PropTypes.func.isRequired,
         onImageSelected: PropTypes.func.isRequired,
         item: PropTypes.object.isRequired
-    }
+    };
 
     handleImageClick = () => (
         this.props.onImageSelected(this.props.item)
