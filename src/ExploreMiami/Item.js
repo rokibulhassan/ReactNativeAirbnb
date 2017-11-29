@@ -28,7 +28,7 @@ export default class Item extends Component {
         const {picture, tag, title, price, isFavourite} = this.props.item;
         return (
             <div className="column">
-                <img className="favorite" src={this.getFavoriteIcon(isFavourite)} onClick={this.handleImageClick}/>
+                <img className="favorite" src={this.getFavoriteIcon(isFavourite)} onClick={this.handleImageClick} alt={title}/>
                 <img className="ui wireframe image" src={this.getItemImage(picture)} alt={title}/>
                 <a className="tag" onClick={this.handleTagClick}>{tag} </a>
                 <div className="title">{title}</div>

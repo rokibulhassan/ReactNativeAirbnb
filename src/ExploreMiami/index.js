@@ -1,19 +1,22 @@
 import React, {Component} from 'react'
 import Filters from './Filters'
 import ItemList from './ItemList'
-import dataList from './data.js'
+import dataList from './data'
+import categoryList from './categories-data'
 import './style.css'
 
 
 export default class ExploreMiami extends Component {
 
     state = {
-        dataList: []
+        dataList: [],
+        categoryList: []
     }
 
     componentDidMount = () => {
         this.setState({
-            dataList: dataList
+            dataList: dataList,
+            categoryList: categoryList
         })
     }
 
@@ -31,7 +34,7 @@ export default class ExploreMiami extends Component {
 
     filterDataByCategory = (targetCategory) => {
         console.log(targetCategory)
-        
+
         dataList.forEach(function (sectionData) {
             sectionData.items = sectionData.items.filter(function (el) {
                 return el.category.indexOf(targetCategory) > -1;
@@ -44,14 +47,14 @@ export default class ExploreMiami extends Component {
     }
 
     manageFavourite = (item) => {
-        let favouriteSection = dataList[dataList.length -1];
+        let favouriteSection = dataList[dataList.length - 1];
 
         var index = favouriteSection.items.indexOf(item);
-        if(index !== -1) {
+        if (index !== -1) {
             favouriteSection.items.splice(index, 1);
             item.isFavourite = false
         }
-        else{
+        else {
             favouriteSection.items.push(item);
             item.isFavourite = true
         }
@@ -64,7 +67,18 @@ export default class ExploreMiami extends Component {
     render() {
         return (
             <div className="main ui container">
-                <Filters onFilterSelected={this.filterDataByCategory}/>
+                <div className="ui equal width grid filers">
+                    <div className="row">
+                        {this.state.categoryList.map((category) =>
+                            <Filters
+                                key={category.id}
+                                category={category}
+                                onFilterSelected={this.filterDataByCategory}
+                            />
+                        )}
+
+                    </div>
+                </div>
 
                 {this.state.dataList.map((section) =>
                     <ItemList
