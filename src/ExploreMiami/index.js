@@ -45,7 +45,7 @@ export default class ExploreMiami extends Component {
     render() {
         return (
             <div className="main ui container">
-                <Filters key='123' onFilter1Selected={this.filterDataByCategory}/>
+                <Filters onFilterSelected={this.filterDataByCategory}/>
 
                 {this.state.dataList.map((section) =>
                     <ItemList

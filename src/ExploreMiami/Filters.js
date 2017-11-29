@@ -2,11 +2,11 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 export default class Filters extends Component {
     static propTypes = {
-        onFilter1Selected: PropTypes.func.isRequired
+        onFilterSelected: PropTypes.func.isRequired
     }
 
     handleCategoryFilter = () => (
-        this.props.onFilter1Selected(view.className)
+        this.props.onFilterSelected("Homes")
     );
 
     render() {
