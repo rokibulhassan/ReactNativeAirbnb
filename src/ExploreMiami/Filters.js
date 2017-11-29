@@ -6,7 +6,7 @@ export default class Filters extends Component {
     }
 
     handleCategoryFilter = () => (
-        this.props.onFilter1Selected("Homes")
+        this.props.onFilter1Selected(view.className)
     );
 
     render() {

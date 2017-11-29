@@ -18,8 +18,6 @@ export default class ExploreMiami extends Component {
     }
 
     filterDataByTag = (targetTag) => {
-        console.log("tag")
-
         dataList.forEach(function (sectionData) {
             sectionData.items = sectionData.items.filter(function (el) {
                 return el.tag === targetTag;
@@ -32,6 +30,7 @@ export default class ExploreMiami extends Component {
     }
 
     filterDataByCategory = (targetCategory) => {
+        console.log(targetCategory)
         dataList.forEach(function (sectionData) {
             sectionData.items = sectionData.items.filter(function (el) {
                 return el.category.indexOf(targetCategory) > -1;
