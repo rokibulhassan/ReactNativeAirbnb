@@ -4,16 +4,16 @@ import PropTypes from 'prop-types'
 export default class Item extends Component {
     static propTypes = {
         onTagSelected: PropTypes.func.isRequired,
-        onFavourite: PropTypes.func.isRequired,
+        onImageSelected: PropTypes.func.isRequired,
         item: PropTypes.object.isRequired
     }
 
-    handleTagClick = () => (
-        this.props.onTagSelected(this.props.item.tag)
+    handleImageClick = () => (
+        this.props.onImageSelected(this.props.item)
     );
 
-    handleImageClick = () => (
-        this.props.onTagSelected(this.props.item)
+    handleTagClick = () => (
+        this.props.onTagSelected(this.props.item.tag)
     );
 
     render() {

@@ -31,11 +31,30 @@ export default class ExploreMiami extends Component {
 
     filterDataByCategory = (targetCategory) => {
         console.log(targetCategory)
+        
         dataList.forEach(function (sectionData) {
             sectionData.items = sectionData.items.filter(function (el) {
                 return el.category.indexOf(targetCategory) > -1;
             });
         });
+
+        this.setState({
+            dataList: dataList
+        })
+    }
+
+    manageFavourite = (item) => {
+        let favouriteSection = dataList[dataList.length -1];
+
+        var index = favouriteSection.items.indexOf(item);
+        if(index !== -1) {
+            favouriteSection.items.splice(index, 1);
+            item.isFavourite = false
+        }
+        else{
+            favouriteSection.items.push(item);
+            item.isFavourite = true
+        }
 
         this.setState({
             dataList: dataList
@@ -53,6 +72,7 @@ export default class ExploreMiami extends Component {
                         name={section.name}
                         items={section.items}
                         onTagSelected={this.filterDataByTag}
+                        onImageSelected={this.manageFavourite}
                     />
                 )}
             </div>
